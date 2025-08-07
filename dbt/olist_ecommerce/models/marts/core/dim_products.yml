@@ -1,0 +1,16 @@
+version: 2
+
+models:
+  - name: dim_products
+    description: "Dimension table for Olist products"
+    columns:
+      - name: product_id
+        tests: [not_null, unique]
+      - name: product_category_name
+      - name: product_weight_g
+      - name: product_height_cm
+      - name: product_width_cm
+      - name: product_length_cm
+      - name: average_price
+      - name: average_freight_value
+      - name: num_orders

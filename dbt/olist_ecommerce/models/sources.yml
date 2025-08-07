@@ -1,0 +1,14 @@
+version: 2
+
+sources:
+  - name: olist
+    schema: bronze
+    tables:
+      - name: customers_raw
+      - name: geolocation_raw
+      - name: order_items_raw
+      - name: order_payments_raw
+      - name: order_reviews_raw
+      - name: orders_raw
+      - name: products_raw
+      - name: sellers_raw

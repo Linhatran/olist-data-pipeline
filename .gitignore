@@ -205,3 +205,13 @@ cython_debug/
 marimo/_static/
 marimo/_lsp/
 __marimo__/
+
+dbt_packages/
+dbt_modules/
+logs/
+target/
+manifest.json
+catalog.json
+run_results.json
+
+*.duckdb

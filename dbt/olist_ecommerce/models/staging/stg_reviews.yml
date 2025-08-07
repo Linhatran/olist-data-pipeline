@@ -1,0 +1,15 @@
+version: 2
+
+models:
+  - name: stg_reviews
+    description: "Staging table for Olist order reviews"
+    columns:
+      - name: review_id
+        tests: [not_null]
+      - name: order_id
+        tests: [not_null]
+      - name: review_score
+      - name: review_comment_title
+      - name: review_comment_message
+      - name: review_creation_ts
+      - name: review_answer_ts

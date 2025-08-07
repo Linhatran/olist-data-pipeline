@@ -1,0 +1,12 @@
+version: 2
+
+models:
+  - name: stg_geolocation
+    description: "Staging table for Olist geolocation"
+    columns:
+      - name: geolocation_zip_code_prefix
+        tests: [not_null]
+      - name: geolocation_city
+        tests: [not_null]
+      - name: geolocation_state
+        tests: [not_null]

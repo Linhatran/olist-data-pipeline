@@ -1,9 +1,9 @@
 with customers as (
-  select * from {{ ref('stg_customers') }}
+    select * from {{ ref('stg_customers') }}
 ),
 
 geolocation as (
-    select 
+    select
         geolocation_zip_code_prefix,
         avg(geolocation_lat) as geolocation_lat,
         avg(geolocation_lng) as geolocation_lng
@@ -11,10 +11,11 @@ geolocation as (
     group by geolocation_zip_code_prefix
 )
 
-select c.*,
-       g.geolocation_lat,
-       g.geolocation_lng
+select
+    c.*,
+    g.geolocation_lat,
+    g.geolocation_lng
 
-from customers c
-left join geolocation g
-on c.customer_zip_code_prefix = g.geolocation_zip_code_prefix
+from customers as c
+left join geolocation as g
+    on c.customer_zip_code_prefix = g.geolocation_zip_code_prefix

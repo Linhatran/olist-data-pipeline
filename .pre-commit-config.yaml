@@ -1,0 +1,15 @@
+repos:
+  - repo: local
+    hooks:
+      - id: sqlfluff-lint
+        name: sqlfluff lint
+        entry: ./venv/bin/sqlfluff lint
+        language: system
+        types: [sql]
+        args: [--dialect=duckdb, dbt/olist_ecommerce/models]
+      - id: sqlfluff-fix
+        name: sqlfluff fix
+        entry: ./venv/bin/sqlfluff fix
+        language: system
+        types: [sql]
+        args: [--dialect=duckdb, dbt/olist_ecommerce/models]

@@ -1,0 +1,18 @@
+version: 2
+
+models:
+  - name: dim_customers
+    description: "Dimension table for Olist customers"
+    columns:
+      - name: customer_id
+        tests: [not_null, unique]
+      - name: customer_state
+        tests: [not_null]
+      - name: customer_city
+        tests: [not_null]
+      - name: customer_zip_code_prefix
+        tests: [not_null]
+      - name: customer_unique_id
+        tests: [not_null]
+      - name: geolocation_lat
+      - name: geolocation_lng

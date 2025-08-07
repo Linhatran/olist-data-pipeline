@@ -10,3 +10,7 @@ models:
         tests: [not_null]
       - name: geolocation_state
         tests: [not_null]
+      - name: geolocation_lat
+        tests: [not_null]
+      - name: geolocation_lng
+        tests: [not_null]
